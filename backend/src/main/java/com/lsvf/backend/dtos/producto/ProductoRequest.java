@@ -29,4 +29,7 @@ public class ProductoRequest {
 
     @NotBlank(message = "La disponibilidad es obligatoria.")
     private DisponibilidadProducto disponibilidadProducto;
+
+    @NotBlank(message = "Es obligatorio el id de la categoria del producto")
+    private Long categoriaId;
 }
