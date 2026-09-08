@@ -1,7 +1,7 @@
 package com.lsvf.backend.repository;
 
 import com.lsvf.backend.entities.Producto;
-import com.lsvf.backend.enums.DisponibilidadProducto;
+import com.lsvf.backend.enums.producto.DisponibilidadProducto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.lsvf.backend.dtos.producto;
 
-import com.lsvf.backend.enums.DisponibilidadProducto;
+import com.lsvf.backend.enums.producto.DisponibilidadProducto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

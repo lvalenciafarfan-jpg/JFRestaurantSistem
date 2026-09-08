@@ -2,8 +2,8 @@ package com.lsvf.backend.mappers;
 
 import com.lsvf.backend.dtos.security.RegistroRequest;
 import com.lsvf.backend.entities.Usuario;
-import com.lsvf.backend.enums.EstadoUsuario;
-import com.lsvf.backend.enums.Rol;
+import com.lsvf.backend.enums.usuario.EstadoUsuario;
+import com.lsvf.backend.enums.usuario.Rol;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 

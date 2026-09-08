@@ -1,12 +1,13 @@
 package com.lsvf.backend.entities;
 
-import com.lsvf.backend.enums.DisponibilidadProducto;
+import com.lsvf.backend.enums.producto.DisponibilidadProducto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Data
@@ -37,4 +38,7 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private CategoriaProducto categoriaProducto;
+
+    @OneToMany(mappedBy = "producto")
+    private List<ItemPedido> itemsPedido;
 }

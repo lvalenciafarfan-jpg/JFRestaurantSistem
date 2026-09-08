@@ -4,7 +4,7 @@ import com.lsvf.backend.dtos.producto.ProductoRequest;
 import com.lsvf.backend.dtos.producto.ProductoResponse;
 import com.lsvf.backend.entities.CategoriaProducto;
 import com.lsvf.backend.entities.Producto;
-import com.lsvf.backend.enums.DisponibilidadProducto;
+import com.lsvf.backend.enums.producto.DisponibilidadProducto;
 import com.lsvf.backend.mappers.ProductoMapper;
 import com.lsvf.backend.repository.CategoriaProductoRepository;
 import com.lsvf.backend.repository.ProductoRepository;

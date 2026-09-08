@@ -1,7 +1,7 @@
 package com.lsvf.backend.entities;
 
-import com.lsvf.backend.enums.EstadoUsuario;
-import com.lsvf.backend.enums.Rol;
+import com.lsvf.backend.enums.usuario.EstadoUsuario;
+import com.lsvf.backend.enums.usuario.Rol;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
