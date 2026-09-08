@@ -1,4 +1,4 @@
-package com.lsvf.backend.service;
+package com.lsvf.backend.service.producto;
 
 import com.lsvf.backend.dtos.producto.ProductoRequest;
 import com.lsvf.backend.dtos.producto.ProductoResponse;

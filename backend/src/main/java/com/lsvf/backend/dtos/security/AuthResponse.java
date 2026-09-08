@@ -1,4 +1,4 @@
-package com.lsvf.backend.dtos;
+package com.lsvf.backend.dtos.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

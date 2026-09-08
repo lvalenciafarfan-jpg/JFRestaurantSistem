@@ -1,6 +1,6 @@
 package com.lsvf.backend.mappers;
 
-import com.lsvf.backend.dtos.RegistroRequest;
+import com.lsvf.backend.dtos.security.RegistroRequest;
 import com.lsvf.backend.entities.Usuario;
 import com.lsvf.backend.enums.EstadoUsuario;
 import com.lsvf.backend.enums.Rol;

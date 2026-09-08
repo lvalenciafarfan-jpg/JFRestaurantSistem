@@ -1,8 +1,8 @@
 package com.lsvf.backend.controller;
 
-import com.lsvf.backend.dtos.AuthResponse;
-import com.lsvf.backend.dtos.LoginRequest;
-import com.lsvf.backend.dtos.RegistroRequest;
+import com.lsvf.backend.dtos.security.AuthResponse;
+import com.lsvf.backend.dtos.security.LoginRequest;
+import com.lsvf.backend.dtos.security.RegistroRequest;
 import com.lsvf.backend.entities.Usuario;
 import com.lsvf.backend.mappers.RegistroMapper;
 import com.lsvf.backend.repository.UsuarioRepository;

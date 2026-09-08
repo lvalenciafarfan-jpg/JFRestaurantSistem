@@ -1,4 +1,4 @@
-package com.lsvf.backend.service;
+package com.lsvf.backend.service.producto;
 
 import com.lsvf.backend.dtos.producto.ProductoRequest;
 import com.lsvf.backend.dtos.producto.ProductoResponse;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProductoServiceImpl implements ProductoService{
+public class ProductoServiceImpl implements ProductoService {
 
     private final ProductoRepository productoRepository;
 
