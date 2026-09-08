@@ -10,13 +10,13 @@ pedidos a domicilio, reserva de mesas, reseñas y panel de administración.
 - ✅ Configuración inicial y conexión a PostgreSQL
 - ✅ Entidad Usuario, Rol y EstadoUsuario
 - ✅ Autenticación con Spring Security + JWT (registro y login)
+- ✅ Menú: CRUD de productos y categorías, con rutas protegidas por rol
 
 ### En progreso / pendiente
-- ⏳ Menú y catálogo de productos
 - ⏳ Pedidos a domicilio
 - ⏳ Reservas de mesas
 - ⏳ Reseñas
-- ⏳ Panel de administración
+- ⏳ Panel de administración completo
 - ⏳ Frontend
 
 ## Stack
@@ -29,3 +29,6 @@ JFRestaurantSistem/
 ├── backend/     ← API REST en Spring Boot
 └── frontend/    ← (pendiente)
 ```
+
+## Modelo de datos
+![Diagrama ER](docs/diagrama-er.png)
