@@ -9,6 +9,7 @@ public interface ProductoService {
     List<ProductoResponse> allProductos();
     List<ProductoResponse> productosDisponibles();
     ProductoResponse productoPorId(Long id);
+    ProductoResponse actualizarProducto(Long id, ProductoRequest productoRequest);
     ProductoResponse productoCreado(ProductoRequest productoRequest);
     void desactivarProducto(Long id);
     void activarProducto(Long id);
