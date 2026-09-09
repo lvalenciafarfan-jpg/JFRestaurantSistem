@@ -39,11 +39,15 @@ public class Usuario implements UserDetails {
     @Column(nullable = false)
     private Rol rolUsuario;
 
+    @Column(nullable = false)
     private LocalDateTime fechaRegistro;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private EstadoUsuario estadoCuenta;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Pedido> pedidos;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
