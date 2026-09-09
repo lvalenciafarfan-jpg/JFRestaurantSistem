@@ -24,19 +24,23 @@ public class Pedido {
 
     private Usuario usuario;
 
+    @Column(nullable = false)
     private LocalDateTime fecha;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private TipoPedido tipoPedido;
 
     private String direccion;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private EstadoPedido estadoPedido;
 
     @Enumerated(EnumType.STRING)
     private MetodoPago metodoPago;
 
+    @Column(nullable = false)
     private BigDecimal total;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)

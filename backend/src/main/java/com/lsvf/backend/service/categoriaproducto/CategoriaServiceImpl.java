@@ -5,9 +5,11 @@ import com.lsvf.backend.dtos.categoria.CategoriaResponse;
 import com.lsvf.backend.entities.CategoriaProducto;
 import com.lsvf.backend.mappers.CategoriaMapper;
 import com.lsvf.backend.repository.CategoriaProductoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CategoriaServiceImpl implements CategoriaService {
 
     private final CategoriaProductoRepository categoriaRepository;
