@@ -27,9 +27,9 @@ public class ProductoRequest {
     @NotBlank(message = "La url de la imagen es obligaoria")
     private String urlImagen;
 
-    @NotBlank(message = "La disponibilidad es obligatoria.")
+    @NotNull(message = "La disponibilidad es obligatoria.")
     private DisponibilidadProducto disponibilidadProducto;
 
-    @NotBlank(message = "Es obligatorio el id de la categoria del producto")
+    @NotNull(message = "Es obligatorio el id de la categoria del producto")
     private Long categoriaId;
 }

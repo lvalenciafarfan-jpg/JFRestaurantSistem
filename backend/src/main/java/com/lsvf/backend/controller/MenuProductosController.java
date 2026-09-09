@@ -31,9 +31,24 @@ public class MenuProductosController {
         return ResponseEntity.ok().body(productoService.productosDisponibles());
     }
 
+    @GetMapping("/productos/admins")
+    public ResponseEntity<List<ProductoResponse>> allProductos(){
+        return ResponseEntity.ok().body(productoService.allProductos());
+    }
+
     @GetMapping("/producto/{id}")
     public ResponseEntity<ProductoResponse> productoPorId(@PathVariable Long id){
         return ResponseEntity.ok().body(productoService.productoPorId(id));
+    }
+
+    @PutMapping("/productos/{id}/desactivar")
+    public void desactivarProducto(@PathVariable Long id){
+        productoService.desactivarProducto(id);
+    }
+
+    @PutMapping("/productos/{id}/activar")
+    public void activarProducto(@PathVariable Long id){
+        productoService.activarProducto(id);
     }
 
     @GetMapping("/categorias")
