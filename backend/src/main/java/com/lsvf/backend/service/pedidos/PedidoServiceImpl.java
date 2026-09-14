@@ -95,4 +95,60 @@ public class PedidoServiceImpl implements PedidoService {
                 .map(pedidoMapper::toResponse)
                 .toList();
     }
+
+    @Override
+    public PedidoResponse cancelarPedido(Long id, Usuario usuario) {
+        Pedido pedido = pedidoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("El pedido no existe con id: " + id));
+
+        if(!pedido.getUsuario().getId().equals(usuario.getId())){
+            throw new RuntimeException("No puedes cancelar un pedido que no es tuyo.");
+        }
+
+        if(pedido.getEstadoPedido() != EstadoPedido.PENDIENTE){
+            throw new RuntimeException("No se puede cancelar un pedido que no esta pendiente.");
+        }
+
+        pedido.setEstadoPedido(EstadoPedido.CANCELADO);
+        pedidoRepository.save(pedido);
+
+        return pedidoMapper.toResponse(pedido);
+    }
+
+    @Override
+    public PedidoResponse cambiarEstado(Long id, EstadoPedido estadoNuevo){
+        Pedido pedido = pedidoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("El pedido no existe con id: " + id));
+
+        validarTransicion(pedido.getEstadoPedido(), estadoNuevo);
+
+        pedido.setEstadoPedido(estadoNuevo);
+        pedidoRepository.save(pedido);
+
+        return pedidoMapper.toResponse(pedido);
+    }
+
+    @Override
+    public List<PedidoResponse> listarTodos(EstadoPedido estado){
+        List<Pedido> pedidos = (estado != null) ? pedidoRepository.findByEstadoPedido(estado)
+                : pedidoRepository.findAll();
+
+        return pedidos.stream().map(pedidoMapper::toResponse).toList();
+    }
+
+
+    public void validarTransicion(EstadoPedido actual, EstadoPedido cambioEstado){
+
+        Boolean valido = switch (actual){
+            case PENDIENTE -> cambioEstado == EstadoPedido.EN_PREPARACION || cambioEstado == EstadoPedido.CANCELADO;
+            case EN_PREPARACION -> cambioEstado == EstadoPedido.EN_CAMINO || cambioEstado == EstadoPedido.ENTREGADO;
+            case EN_CAMINO -> cambioEstado == EstadoPedido.ENTREGADO;
+            case ENTREGADO, CANCELADO -> false;
+        };
+
+        if(!valido){
+            throw new RuntimeException("Transicion de estado invalida: de " + actual + "a "  + cambioEstado);
+        }
+    }
+
 }
