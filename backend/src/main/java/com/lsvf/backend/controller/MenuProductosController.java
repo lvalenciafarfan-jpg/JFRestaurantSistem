@@ -7,6 +7,7 @@ import com.lsvf.backend.dtos.producto.ProductoRequest;
 import com.lsvf.backend.dtos.producto.ProductoResponse;
 import com.lsvf.backend.service.categoriaproducto.CategoriaService;
 import com.lsvf.backend.service.producto.ProductoService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -57,17 +58,17 @@ public class MenuProductosController {
     }
 
     @PostMapping("/categorias")
-    public ResponseEntity<CategoriaResponse> crearCategoria(@RequestBody CategoriaRequest request){
+    public ResponseEntity<CategoriaResponse> crearCategoria(@Valid @RequestBody CategoriaRequest request){
         return ResponseEntity.status(HttpStatus.CREATED).body(categoriaService.crearCategoria(request));
     }
 
     @PostMapping("/productos")
-    public ResponseEntity<ProductoResponse> crearProducto(@RequestBody ProductoRequest request){
+    public ResponseEntity<ProductoResponse> crearProducto(@Valid @RequestBody ProductoRequest request){
         return ResponseEntity.status(HttpStatus.CREATED).body(productoService.productoCreado(request));
     }
 
     @PutMapping("/productos/{id}")
-    public ResponseEntity<ProductoResponse> actualizarProducto(@RequestBody ProductoRequest request, @PathVariable Long id){
+    public ResponseEntity<ProductoResponse> actualizarProducto(@Valid @RequestBody ProductoRequest request, @PathVariable Long id){
         return ResponseEntity.ok().body(productoService.actualizarProducto(id, request));
     }
 
