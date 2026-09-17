@@ -14,7 +14,9 @@ public class ReservaResponse {
 
     private MesaResponse mesaResponse;
 
-    private LocalDateTime fecha;
+    private LocalDateTime horaInicio;
+
+    private LocalDateTime horaFin;
 
     private Integer cantidadPersonas;
 

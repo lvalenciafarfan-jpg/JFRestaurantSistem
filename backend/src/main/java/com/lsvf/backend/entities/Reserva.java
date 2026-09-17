@@ -15,10 +15,14 @@ import java.time.LocalDateTime;
 public class Reserva {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime fecha;
+    private LocalDateTime horaInicio;
+
+    @Column(nullable = false)
+    private LocalDateTime horaFin;
 
     @Column(nullable = false)
     private Integer cantidadPersonas;

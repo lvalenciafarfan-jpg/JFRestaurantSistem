@@ -22,7 +22,7 @@ public class Mesa {
     private Integer numeroMesa;
 
     @Column(nullable = false)
-    private Long capacidad;
+    private Integer capacidad;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
