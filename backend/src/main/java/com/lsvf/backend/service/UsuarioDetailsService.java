@@ -1,5 +1,7 @@
 package com.lsvf.backend.service;
 
+import com.lsvf.backend.exception.customs.CredencialesInvalidasException;
+import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
 import com.lsvf.backend.repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -18,6 +20,6 @@ public class UsuarioDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String correo) throws UsernameNotFoundException {
         return usuarioRepository.findByCorreo(correo).
-                orElseThrow(() -> new UsernameNotFoundException("usuario no encontrado con correo" + correo));
+                orElseThrow(() -> new CredencialesInvalidasException("usuario no encontrado con correo" + correo));
     }
 }

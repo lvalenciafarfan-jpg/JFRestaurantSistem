@@ -4,6 +4,8 @@ import com.lsvf.backend.dtos.security.AuthResponse;
 import com.lsvf.backend.dtos.security.LoginRequest;
 import com.lsvf.backend.dtos.security.RegistroRequest;
 import com.lsvf.backend.entities.Usuario;
+import com.lsvf.backend.exception.customs.CredencialesInvalidasException;
+import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
 import com.lsvf.backend.mappers.RegistroMapper;
 import com.lsvf.backend.repository.UsuarioRepository;
 import com.lsvf.backend.security.JwtService;
@@ -48,7 +50,7 @@ public class AuthController {
         );
 
         UserDetails usuario = usuarioRepository.findByCorreo(request.getCorreo())
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+                .orElseThrow(() -> new CredencialesInvalidasException("Usuario no encontrado"));
 
         String token = jwtService.generarToken(usuario);
         return ResponseEntity.ok(new AuthResponse(token));

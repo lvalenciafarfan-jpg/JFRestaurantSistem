@@ -5,6 +5,7 @@ import com.lsvf.backend.dtos.producto.ProductoResponse;
 import com.lsvf.backend.entities.CategoriaProducto;
 import com.lsvf.backend.entities.Producto;
 import com.lsvf.backend.enums.producto.DisponibilidadProducto;
+import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
 import com.lsvf.backend.mappers.ProductoMapper;
 import com.lsvf.backend.repository.CategoriaProductoRepository;
 import com.lsvf.backend.repository.ProductoRepository;
@@ -29,12 +30,12 @@ public class ProductoServiceImpl implements ProductoService {
 
     public Producto encontrarProducto(Long id){
         return productoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Producto no encontrado con id " + id));
+                .orElseThrow(() -> new RecursoNoEncontradoException("Producto no encontrado con id " + id));
     }
 
     public CategoriaProducto encontrarCategoriaP(Long id){
         return categoriaProductoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("La categoria del producto con " + id + " no existe."));
+                .orElseThrow(() -> new RecursoNoEncontradoException("La categoria del producto con " + id + " no existe."));
     }
     @Override
     public List<ProductoResponse> allProductos() {

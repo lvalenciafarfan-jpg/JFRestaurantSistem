@@ -9,6 +9,8 @@ import com.lsvf.backend.entities.Producto;
 import com.lsvf.backend.entities.Usuario;
 import com.lsvf.backend.enums.pedido.EstadoPedido;
 import com.lsvf.backend.enums.pedido.TipoPedido;
+import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
+import com.lsvf.backend.exception.customs.ReglaDeNegocioException;
 import com.lsvf.backend.mappers.PedidoMapper;
 import com.lsvf.backend.repository.PedidoRepository;
 import com.lsvf.backend.repository.ProductoRepository;
@@ -40,7 +42,7 @@ public class PedidoServiceImpl implements PedidoService {
 
         if (request.getTipoPedido() == TipoPedido.A_DOMICILIO
                 && (request.getDireccion() == null || request.getDireccion().isBlank())) {
-            throw new RuntimeException("La direccion es obligatoria para pedidos a domicilio");
+                throw new ReglaDeNegocioException("La direccion es obligatoria para pedidos a domicilio");
         }
 
         Pedido pedido = new Pedido();
@@ -56,7 +58,7 @@ public class PedidoServiceImpl implements PedidoService {
 
         for (ItemPedidoRequest itemRequest : request.getItems()) {
             Producto producto = productoRepository.findById(itemRequest.getProductoId())
-                    .orElseThrow(() -> new RuntimeException(
+                    .orElseThrow(() -> new RecursoNoEncontradoException(
                             "Producto no encontrado con id " + itemRequest.getProductoId()));
 
             BigDecimal precioUnitario = producto.getPrecio(); // se "congela" aqui
@@ -84,7 +86,7 @@ public class PedidoServiceImpl implements PedidoService {
     @Override
     public PedidoResponse pedidoPorId(Long id) {
         Pedido pedido = pedidoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Pedido no encontrado con id " + id));
+                .orElseThrow(() -> new RecursoNoEncontradoException("Pedido no encontrado con id " + id));
         return pedidoMapper.toResponse(pedido);
     }
 
@@ -99,14 +101,14 @@ public class PedidoServiceImpl implements PedidoService {
     @Override
     public PedidoResponse cancelarPedido(Long id, Usuario usuario) {
         Pedido pedido = pedidoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("El pedido no existe con id: " + id));
+                .orElseThrow(() -> new RecursoNoEncontradoException("El pedido no existe con id: " + id));
 
         if(!pedido.getUsuario().getId().equals(usuario.getId())){
-            throw new RuntimeException("No puedes cancelar un pedido que no es tuyo.");
+            throw new ReglaDeNegocioException("No puedes cancelar un pedido que no es tuyo.");
         }
 
         if(pedido.getEstadoPedido() != EstadoPedido.PENDIENTE){
-            throw new RuntimeException("No se puede cancelar un pedido que no esta pendiente.");
+            throw new ReglaDeNegocioException("No se puede cancelar un pedido que no esta pendiente.");
         }
 
         pedido.setEstadoPedido(EstadoPedido.CANCELADO);
@@ -118,7 +120,7 @@ public class PedidoServiceImpl implements PedidoService {
     @Override
     public PedidoResponse cambiarEstado(Long id, EstadoPedido estadoNuevo){
         Pedido pedido = pedidoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("El pedido no existe con id: " + id));
+                .orElseThrow(() -> new RecursoNoEncontradoException("El pedido no existe con id: " + id));
 
         validarTransicion(pedido.getEstadoPedido(), estadoNuevo);
 
@@ -147,7 +149,7 @@ public class PedidoServiceImpl implements PedidoService {
         };
 
         if(!valido){
-            throw new RuntimeException("Transicion de estado invalida: de " + actual + "a "  + cambioEstado);
+            throw new ReglaDeNegocioException("Transicion de estado invalida: de " + actual + "a "  + cambioEstado);
         }
     }
 

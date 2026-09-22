@@ -7,6 +7,9 @@ import com.lsvf.backend.entities.Reserva;
 import com.lsvf.backend.entities.Usuario;
 import com.lsvf.backend.enums.mesa.EstadoMesa;
 import com.lsvf.backend.enums.mesa.EstadoReserva;
+import com.lsvf.backend.exception.customs.AccesoDenegadoException;
+import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
+import com.lsvf.backend.exception.customs.ReglaDeNegocioException;
 import com.lsvf.backend.mappers.ReservaMesaMapper;
 import com.lsvf.backend.repository.MesaRepository;
 import com.lsvf.backend.repository.ReservaRepository;
@@ -43,13 +46,13 @@ public class ReservaServiceImpl implements ReservaService{
     public ReservaResponse crearReserva(ReservaRequest request, Usuario usuario) {
 
         if(request.getHoraInicio().isAfter(request.getHoraFin())){
-            throw new RuntimeException("La hora de fin debe ser posterior a la hora de inicio. ");
+            throw new ReglaDeNegocioException("La hora de fin debe ser posterior a la hora de inicio. ");
         }
 
         List<Reserva> reservasSolapadas = reservaRepository.findReservasSolapadas(request.getId_mesa(), request.getHoraInicio(), request.getHoraFin());
 
         if(!reservasSolapadas.isEmpty()){
-            throw new RuntimeException("La mesa ya esta reservada en ese horario");
+            throw new ReglaDeNegocioException("La mesa ya esta reservada en ese horario");
         }
 
         Reserva reserva = reservaMesaMapper.toEntityReserva(request);
@@ -67,10 +70,10 @@ public class ReservaServiceImpl implements ReservaService{
     @Override
     public ReservaResponse listarReservaId(Usuario usuario, Long id) {
         Reserva reserva = reservaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Esta reserva no existe."));
+                .orElseThrow(() -> new RecursoNoEncontradoException("Esta reserva no existe."));
 
         if (!reserva.getUsuario().getId().equals(usuario.getId())){
-            throw new RuntimeException("Esta reserva no es tuya!");
+            throw new AccesoDenegadoException("Esta reserva no es tuya!");
         }
 
         return reservaMesaMapper.toResponseReserva(reserva);
@@ -87,7 +90,7 @@ public class ReservaServiceImpl implements ReservaService{
     public ReservaResponse cambiarEstadoReserva(EstadoReserva estadoReserva, Long id) {
 
         Reserva reserva = reservaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Esta reserva no existe."));
+                .orElseThrow(() -> new RecursoNoEncontradoException("Esta reserva no existe."));
 
         validarTransicion(reserva.getEstadoReserva(), estadoReserva);
 
@@ -107,10 +110,10 @@ public class ReservaServiceImpl implements ReservaService{
     public ReservaResponse cancelarReserva(Usuario usuario, Long id) {
 
         Reserva reserva = reservaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Esta reserva no existe."));
+                .orElseThrow(() -> new RecursoNoEncontradoException("Esta reserva no existe."));
 
         if (!reserva.getUsuario().getId().equals(usuario.getId())){
-            throw new RuntimeException("Esta reserva no es tuya!");
+            throw new AccesoDenegadoException("Esta reserva no es tuya!");
         }
 
         validarTransicion(reserva.getEstadoReserva(), EstadoReserva.CANCELADA);
@@ -134,7 +137,7 @@ public class ReservaServiceImpl implements ReservaService{
         };
 
         if(!valido){
-            throw new RuntimeException("Transicion de estado invalida: de " + actual + "a "  + estadoNuevo);
+            throw new ReglaDeNegocioException("Transicion de estado invalida: de " + actual + "a "  + estadoNuevo);
         }
     }
 }
