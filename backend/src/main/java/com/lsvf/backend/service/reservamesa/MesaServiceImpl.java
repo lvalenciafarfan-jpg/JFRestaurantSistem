@@ -41,6 +41,6 @@ public class MesaServiceImpl implements MesaService{
     @Override
     public List<MesaResponse> listarMesasDisponibles() {
 
-        return mesaRepository.findByEstadoMesa(EstadoMesa.DISPONIBLE).stream().map(reservaMesaMapper::toResponseMesa).toList();
+        return mesaRepository.findByEstado(EstadoMesa.DISPONIBLE).stream().map(reservaMesaMapper::toResponseMesa).toList();
     }
 }

@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface MesaRepository extends JpaRepository<Mesa, Long> {
-    List<Mesa> findByEstadoMesa(EstadoMesa estadoMesa);
+    List<Mesa> findByEstado(EstadoMesa estadoMesa);
 }
