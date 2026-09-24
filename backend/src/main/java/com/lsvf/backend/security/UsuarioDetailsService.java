@@ -1,7 +1,6 @@
-package com.lsvf.backend.service;
+package com.lsvf.backend.security;
 
 import com.lsvf.backend.exception.customs.CredencialesInvalidasException;
-import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
 import com.lsvf.backend.repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

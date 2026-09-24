@@ -1,6 +1,5 @@
 package com.lsvf.backend.security;
 
-import com.lsvf.backend.service.UsuarioDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
