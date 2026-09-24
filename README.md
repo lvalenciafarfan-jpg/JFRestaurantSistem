@@ -12,9 +12,10 @@ pedidos a domicilio, reserva de mesas, reseñas y panel de administración.
 - ✅ Autenticación con Spring Security + JWT (registro y login)
 - ✅ Menú: CRUD de productos y categorías, con rutas protegidas por rol
 - ✅ Pedidos: creación, historial, cambio de estado, cancelación, listado admin
+- ✅ Reservas y Mesas: creación con validación de solapamiento, liberación automática por tiempo, cancelación, listado admin
+- ✅ Manejo global de excepciones personalizadas
 
 ### En progreso / pendiente
-- ⏳ Reservas de mesas
 - ⏳ Reseñas
 - ⏳ Panel de administración completo
 - ⏳ Frontend
