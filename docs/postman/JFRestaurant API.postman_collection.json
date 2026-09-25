@@ -1,0 +1,2176 @@
+{
+  "info": {
+    "_postman_id": "939538fb-b03c-430a-8fe1-773a63fcd361",
+    "name": "JFRestaurant API",
+    "description": "API REST para gestion y reservas de restaurantes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52714129",
+    "_collection_link": "https://go.postman.co/collection/52714129-939538fb-b03c-430a-8fe1-773a63fcd361?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "reservas",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "estado",
+                  "item": [
+                    {
+                      "name": "actualizar Estado Reserva",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/reservas/:id/estado?nuevoEstado=CONFIRMADA",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "reservas",
+                            ":id",
+                            "estado"
+                          ],
+                          "query": [
+                            {
+                              "key": "nuevoEstado",
+                              "value": "CONFIRMADA"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/reservas/:id/estado?nuevoEstado=CONFIRMADA",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "reservas",
+                                ":id",
+                                "estado"
+                              ],
+                              "query": [
+                                {
+                                  "key": "nuevoEstado",
+                                  "value": "CONFIRMADA"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4979"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "cancelar",
+                  "item": [
+                    {
+                      "name": "cancelar Reserva",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/reservas/:id/cancelar",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "reservas",
+                            ":id",
+                            "cancelar"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/reservas/:id/cancelar",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "reservas",
+                                ":id",
+                                "cancelar"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4979"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "listar Reserva",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/reservas/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "reservas",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4979"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/reservas/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "reservas",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "mias",
+              "item": [
+                {
+                  "name": "listar Reservas Usuario",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/reservas/mias",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "reservas",
+                        "mias"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/reservas/mias",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "reservas",
+                            "mias"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": 9921,\n    \"mesaResponse\": {\n      \"id\": 5695,\n      \"numeroMesa\": 3753,\n      \"capacidad\": 7842,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"1952-12-05T01:15:27.780Z\",\n    \"horaFin\": \"1984-07-01T05:00:48.194Z\",\n    \"cantidadPersonas\": 5530,\n    \"estadoReserva\": \"PENDIENTE\"\n  },\n  {\n    \"id\": 4567,\n    \"mesaResponse\": {\n      \"id\": 9862,\n      \"numeroMesa\": 7494,\n      \"capacidad\": 8515,\n      \"estadoMesa\": \"DISPONIBLE\"\n    },\n    \"horaInicio\": \"1963-10-14T11:25:05.584Z\",\n    \"horaFin\": \"1998-07-17T02:37:22.309Z\",\n    \"cantidadPersonas\": 6284,\n    \"estadoReserva\": \"CANCELADA\"\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "listar Todas Reservas Desde",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/reservas?desde=2004-03-04T19:30:15.081Z&hasta=2004-03-04T19:30:15.081Z",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reservas"
+                  ],
+                  "query": [
+                    {
+                      "key": "desde",
+                      "value": "2004-03-04T19:30:15.081Z"
+                    },
+                    {
+                      "key": "hasta",
+                      "value": "2004-03-04T19:30:15.081Z"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/reservas?desde=2004-03-04T19:30:15.081Z&hasta=2004-03-04T19:30:15.081Z",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "reservas"
+                      ],
+                      "query": [
+                        {
+                          "key": "desde",
+                          "value": "2004-03-04T19:30:15.081Z"
+                        },
+                        {
+                          "key": "hasta",
+                          "value": "2004-03-04T19:30:15.081Z"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"id\": 9921,\n    \"mesaResponse\": {\n      \"id\": 5695,\n      \"numeroMesa\": 3753,\n      \"capacidad\": 7842,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"1952-12-05T01:15:27.780Z\",\n    \"horaFin\": \"1984-07-01T05:00:48.194Z\",\n    \"cantidadPersonas\": 5530,\n    \"estadoReserva\": \"PENDIENTE\"\n  },\n  {\n    \"id\": 4567,\n    \"mesaResponse\": {\n      \"id\": 9862,\n      \"numeroMesa\": 7494,\n      \"capacidad\": 8515,\n      \"estadoMesa\": \"DISPONIBLE\"\n    },\n    \"horaInicio\": \"1963-10-14T11:25:05.584Z\",\n    \"horaFin\": \"1998-07-17T02:37:22.309Z\",\n    \"cantidadPersonas\": 6284,\n    \"estadoReserva\": \"CANCELADA\"\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "crear Reserva",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"cantidadPersonas\": 2475,\n  \"horaFin\": \"1978-05-21T19:07:23.293Z\",\n  \"horaInicio\": \"1970-04-14T01:16:39.078Z\",\n  \"id_mesa\": 2458\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/reservas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reservas"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"cantidadPersonas\": 2475,\n  \"horaFin\": \"1978-05-21T19:07:23.293Z\",\n  \"horaInicio\": \"1970-04-14T01:16:39.078Z\",\n  \"id_mesa\": 2458\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/reservas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "reservas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "productos",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "desactivar",
+                  "item": [
+                    {
+                      "name": "desactivar Producto",
+                      "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/productos/:id/desactivar",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "productos",
+                            ":id",
+                            "desactivar"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/productos/:id/desactivar",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "productos",
+                                ":id",
+                                "desactivar"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4979"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "activar",
+                  "item": [
+                    {
+                      "name": "activar Producto",
+                      "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/productos/:id/activar",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "productos",
+                            ":id",
+                            "activar"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/productos/:id/activar",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "productos",
+                                ":id",
+                                "activar"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4979"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "actualizar Producto",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/productos/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "productos",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4979"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/productos/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "productos",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 2027,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 9660.544061359711,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "admins",
+              "item": [
+                {
+                  "name": "all Productos",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/productos/admins",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "productos",
+                        "admins"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/productos/admins",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "productos",
+                            "admins"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": 8700,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 7542.55235823923,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"AGOTADO\"\n  },\n  {\n    \"id\": 7057,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 1399.582996543831,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "productos Disponibles",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/productos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "productos"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/productos",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "productos"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"id\": 8700,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 7542.55235823923,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"AGOTADO\"\n  },\n  {\n    \"id\": 7057,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 1399.582996543831,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "crear Producto",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/productos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "productos"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/productos",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "productos"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 2027,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 9660.544061359711,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pedidos",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "estado",
+                  "item": [
+                    {
+                      "name": "cambiar Estado",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/pedidos/:id/estado?nuevoEstado=EN_PREPARACION",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "pedidos",
+                            ":id",
+                            "estado"
+                          ],
+                          "query": [
+                            {
+                              "key": "nuevoEstado",
+                              "value": "EN_PREPARACION"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/pedidos/:id/estado?nuevoEstado=EN_PREPARACION",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "pedidos",
+                                ":id",
+                                "estado"
+                              ],
+                              "query": [
+                                {
+                                  "key": "nuevoEstado",
+                                  "value": "EN_PREPARACION"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4979"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "cancelar",
+                  "item": [
+                    {
+                      "name": "cancelar Pedido",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/pedidos/:id/cancelar",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "pedidos",
+                            ":id",
+                            "cancelar"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/pedidos/:id/cancelar",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "pedidos",
+                                ":id",
+                                "cancelar"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4979"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "pedido Por Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/pedidos/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "pedidos",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4979"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/pedidos/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "pedidos",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "mios",
+              "item": [
+                {
+                  "name": "mis Pedidos",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/pedidos/mios",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "pedidos",
+                        "mios"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/pedidos/mios",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "pedidos",
+                            "mios"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": 4529,\n    \"fecha\": \"2013-10-08T19:20:52.197Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"PENDIENTE\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 4790.124495974859,\n    \"items\": [\n      {\n        \"productoId\": 1294,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 3107,\n        \"precioUnitario\": 3224.006997834833,\n        \"subtotal\": 5023.795738255119\n      },\n      {\n        \"productoId\": 9839,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 7313,\n        \"precioUnitario\": 2420.727760451541,\n        \"subtotal\": 5718.808701700875\n      }\n    ]\n  },\n  {\n    \"id\": 5764,\n    \"fecha\": \"1949-01-10T06:26:18.731Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"EN_PREPARACION\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 706.5030700830266,\n    \"items\": [\n      {\n        \"productoId\": 7040,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 1953,\n        \"precioUnitario\": 958.1849996622127,\n        \"subtotal\": 888.5248706281279\n      },\n      {\n        \"productoId\": 8134,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 8107,\n        \"precioUnitario\": 8824.087663526012,\n        \"subtotal\": 6802.477275879959\n      }\n    ]\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "listar Todos",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/pedidos?estado=EN_PREPARACION",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "pedidos"
+                  ],
+                  "query": [
+                    {
+                      "key": "estado",
+                      "value": "EN_PREPARACION"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/pedidos?estado=EN_PREPARACION",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "pedidos"
+                      ],
+                      "query": [
+                        {
+                          "key": "estado",
+                          "value": "EN_PREPARACION"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"id\": 4529,\n    \"fecha\": \"2013-10-08T19:20:52.197Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"PENDIENTE\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 4790.124495974859,\n    \"items\": [\n      {\n        \"productoId\": 1294,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 3107,\n        \"precioUnitario\": 3224.006997834833,\n        \"subtotal\": 5023.795738255119\n      },\n      {\n        \"productoId\": 9839,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 7313,\n        \"precioUnitario\": 2420.727760451541,\n        \"subtotal\": 5718.808701700875\n      }\n    ]\n  },\n  {\n    \"id\": 5764,\n    \"fecha\": \"1949-01-10T06:26:18.731Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"EN_PREPARACION\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 706.5030700830266,\n    \"items\": [\n      {\n        \"productoId\": 7040,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 1953,\n        \"precioUnitario\": 958.1849996622127,\n        \"subtotal\": 888.5248706281279\n      },\n      {\n        \"productoId\": 8134,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 8107,\n        \"precioUnitario\": 8824.087663526012,\n        \"subtotal\": 6802.477275879959\n      }\n    ]\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "crear Pedido",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"cantidad\": 896,\n      \"productoId\": 2958\n    }\n  ],\n  \"metodoPago\": \"VIRTUAL\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/pedidos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "pedidos"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"items\": [\n    {\n      \"cantidad\": 896,\n      \"productoId\": 2958\n    }\n  ],\n  \"metodoPago\": \"VIRTUAL\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/pedidos",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "pedidos"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mesas",
+          "item": [
+            {
+              "name": "disponibles",
+              "item": [
+                {
+                  "name": "listar Mesas Disponibles",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/mesas/disponibles",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "mesas",
+                        "disponibles"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/mesas/disponibles",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "mesas",
+                            "disponibles"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": 881,\n    \"numeroMesa\": 1619,\n    \"capacidad\": 1622,\n    \"estadoMesa\": \"RESERVADA\"\n  },\n  {\n    \"id\": 3372,\n    \"numeroMesa\": 2941,\n    \"capacidad\": 5010,\n    \"estadoMesa\": \"RESERVADA\"\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "listar Mesas",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/mesas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "mesas"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/mesas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "mesas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"id\": 881,\n    \"numeroMesa\": 1619,\n    \"capacidad\": 1622,\n    \"estadoMesa\": \"RESERVADA\"\n  },\n  {\n    \"id\": 3372,\n    \"numeroMesa\": 2941,\n    \"capacidad\": 5010,\n    \"estadoMesa\": \"RESERVADA\"\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "crear Mesa",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"capacidad\": 6725,\n  \"numeroMesa\": 2611\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/mesas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "mesas"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"capacidad\": 6725,\n  \"numeroMesa\": 2611\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/mesas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "mesas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 8643,\n  \"numeroMesa\": 7642,\n  \"capacidad\": 1837,\n  \"estadoMesa\": \"RESERVADA\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "categorias",
+          "item": [
+            {
+              "name": "all Categorias",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categorias",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categorias"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/categorias",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "categorias"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"nombre\": \"string\"\n  },\n  {\n    \"nombre\": \"string\"\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "crear Categoria",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nombre\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categorias",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categorias"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"nombre\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/categorias",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "categorias"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"nombre\": \"string\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "auth",
+          "item": [
+            {
+              "name": "registro",
+              "item": [
+                {
+                  "name": "registro",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"nombre\": \"string\",\n  \"correo\": \"string\",\n  \"password\": \"string\",\n  \"telefono\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/auth/registro",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "auth",
+                        "registro"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"nombre\": \"string\",\n  \"correo\": \"string\",\n  \"password\": \"string\",\n  \"telefono\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/auth/registro",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "auth",
+                            "registro"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"token\": \"string\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "login",
+              "item": [
+                {
+                  "name": "login",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"correo\": \"string\",\n  \"password\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/auth/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"correo\": \"string\",\n  \"password\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"token\": \"string\"\n}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "producto",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "producto Por Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/producto/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "producto",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4979"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/producto/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "producto",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4979"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 2027,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 9660.544061359711,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
