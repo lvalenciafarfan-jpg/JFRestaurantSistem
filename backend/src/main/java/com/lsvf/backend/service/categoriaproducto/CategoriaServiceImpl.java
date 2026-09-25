@@ -28,7 +28,10 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     public CategoriaResponse crearCategoria(CategoriaRequest request) {
+
         CategoriaProducto categoriaProducto = categoriaMapper.toEntity(request);
+
+        categoriaRepository.save(categoriaProducto);
 
         return categoriaMapper.toResponse(categoriaProducto);
     }

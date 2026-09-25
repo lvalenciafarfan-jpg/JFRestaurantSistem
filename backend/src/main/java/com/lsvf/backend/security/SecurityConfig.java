@@ -50,26 +50,26 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+
+                        // Productos y categorias
                         .requestMatchers(HttpMethod.GET, "/api/productos", "/api/producto/{id}", "/api/categorias/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/productos/admins").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/api/productos/**", "/api/categorias/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/productos", "/api/categorias").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/productos/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/productos/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/api/pedido/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/pedidos/mios").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/pedidos/{id}").permitAll()
+
+                        // Pedidos
                         .requestMatchers(HttpMethod.GET, "/api/pedidos").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/pedidos/{id}/estado").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/api/pedidos/{id}/cancelar").permitAll()
+
+                        // Mesas
                         .requestMatchers(HttpMethod.GET, "/api/mesas/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/mesas/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/api/reservas/**").hasRole("USUARIO")
-                        .requestMatchers(HttpMethod.GET, "/api/reservas/mias").hasRole("USUARIO")
-                        .requestMatchers(HttpMethod.GET, "/api/reservas/{id}").hasRole("USUARIO")
+
+                        // Reservas
                         .requestMatchers(HttpMethod.GET, "/api/reservas").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/reservas/{id}/estado").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/reservas/{id}/cancelar").hasRole("USUARIO")
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers(HttpMethod.PUT, "/api/reservas/{id}/estado").hasRole("ADMIN")
 
                         .anyRequest().authenticated()
                 )
