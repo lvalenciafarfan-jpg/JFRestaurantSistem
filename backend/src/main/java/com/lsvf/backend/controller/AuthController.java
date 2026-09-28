@@ -5,10 +5,10 @@ import com.lsvf.backend.dtos.security.LoginRequest;
 import com.lsvf.backend.dtos.security.RegistroRequest;
 import com.lsvf.backend.entities.Usuario;
 import com.lsvf.backend.exception.customs.CredencialesInvalidasException;
-import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
 import com.lsvf.backend.mappers.RegistroMapper;
 import com.lsvf.backend.repository.UsuarioRepository;
 import com.lsvf.backend.security.JwtService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -35,7 +35,7 @@ public class AuthController {
     }
 
     @PostMapping("/registro")
-    public ResponseEntity<AuthResponse> registro(@RequestBody RegistroRequest request){
+    public ResponseEntity<AuthResponse> registro(@Valid @RequestBody RegistroRequest request){
         Usuario usuario = registroMapper.toEntity(request);
         usuarioRepository.save(usuario);
 
@@ -44,7 +44,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
+    public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getCorreo(), request.getPassword())
         );
