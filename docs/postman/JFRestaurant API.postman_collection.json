@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "939538fb-b03c-430a-8fe1-773a63fcd361",
+    "_postman_id": "e16c51dc-2511-41b9-a46f-00fb2db4be2c",
     "name": "JFRestaurant API",
     "description": "API REST para gestion y reservas de restaurantes",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "52714129",
-    "_collection_link": "https://go.postman.co/collection/52714129-939538fb-b03c-430a-8fe1-773a63fcd361?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/52714129-e16c51dc-2511-41b9-a46f-00fb2db4be2c?source=collection_link"
   },
   "item": [
     {
@@ -31,7 +31,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/reservas/:id/estado?nuevoEstado=CONFIRMADA",
+                          "raw": "{{baseUrl}}/api/reservas/:id/estado?nuevoEstado=PENDIENTE",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -44,13 +44,13 @@
                           "query": [
                             {
                               "key": "nuevoEstado",
-                              "value": "CONFIRMADA"
+                              "value": "PENDIENTE"
                             }
                           ],
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -72,7 +72,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/reservas/:id/estado?nuevoEstado=CONFIRMADA",
+                              "raw": "{{baseUrl}}/api/reservas/:id/estado?nuevoEstado=PENDIENTE",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -85,13 +85,13 @@
                               "query": [
                                 {
                                   "key": "nuevoEstado",
-                                  "value": "CONFIRMADA"
+                                  "value": "PENDIENTE"
                                 }
                               ],
                               "variable": [
                                 {
                                   "key": "id",
-                                  "value": "4979"
+                                  "value": "2825"
                                 }
                               ]
                             }
@@ -106,7 +106,7 @@
                             }
                           ],
                           "cookie": [],
-                          "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                          "body": "{\n  \"id\": 3466,\n  \"mesaResponse\": {\n    \"id\": 5882,\n    \"numeroMesa\": 1027,\n    \"capacidad\": 8951,\n    \"estadoMesa\": \"OCUPADA\"\n  },\n  \"horaInicio\": \"1977-09-09T23:33:40.383Z\",\n  \"horaFin\": \"2015-06-16T05:13:24.868Z\",\n  \"cantidadPersonas\": 6927,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
                         }
                       ]
                     }
@@ -139,7 +139,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -174,7 +174,7 @@
                               "variable": [
                                 {
                                   "key": "id",
-                                  "value": "4979"
+                                  "value": "2825"
                                 }
                               ]
                             }
@@ -189,7 +189,7 @@
                             }
                           ],
                           "cookie": [],
-                          "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                          "body": "{\n  \"id\": 3466,\n  \"mesaResponse\": {\n    \"id\": 5882,\n    \"numeroMesa\": 1027,\n    \"capacidad\": 8951,\n    \"estadoMesa\": \"OCUPADA\"\n  },\n  \"horaInicio\": \"1977-09-09T23:33:40.383Z\",\n  \"horaFin\": \"2015-06-16T05:13:24.868Z\",\n  \"cantidadPersonas\": 6927,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
                         }
                       ]
                     }
@@ -218,7 +218,7 @@
                       "variable": [
                         {
                           "key": "id",
-                          "value": "4979"
+                          "value": "2825"
                         }
                       ]
                     }
@@ -252,7 +252,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -267,7 +267,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                      "body": "{\n  \"id\": 3466,\n  \"mesaResponse\": {\n    \"id\": 5882,\n    \"numeroMesa\": 1027,\n    \"capacidad\": 8951,\n    \"estadoMesa\": \"OCUPADA\"\n  },\n  \"horaInicio\": \"1977-09-09T23:33:40.383Z\",\n  \"horaFin\": \"2015-06-16T05:13:24.868Z\",\n  \"cantidadPersonas\": 6927,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
                     }
                   ]
                 }
@@ -336,7 +336,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "[\n  {\n    \"id\": 9921,\n    \"mesaResponse\": {\n      \"id\": 5695,\n      \"numeroMesa\": 3753,\n      \"capacidad\": 7842,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"1952-12-05T01:15:27.780Z\",\n    \"horaFin\": \"1984-07-01T05:00:48.194Z\",\n    \"cantidadPersonas\": 5530,\n    \"estadoReserva\": \"PENDIENTE\"\n  },\n  {\n    \"id\": 4567,\n    \"mesaResponse\": {\n      \"id\": 9862,\n      \"numeroMesa\": 7494,\n      \"capacidad\": 8515,\n      \"estadoMesa\": \"DISPONIBLE\"\n    },\n    \"horaInicio\": \"1963-10-14T11:25:05.584Z\",\n    \"horaFin\": \"1998-07-17T02:37:22.309Z\",\n    \"cantidadPersonas\": 6284,\n    \"estadoReserva\": \"CANCELADA\"\n  }\n]"
+                      "body": "[\n  {\n    \"id\": 6942,\n    \"mesaResponse\": {\n      \"id\": 3036,\n      \"numeroMesa\": 7757,\n      \"capacidad\": 7775,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"1994-09-17T19:06:29.986Z\",\n    \"horaFin\": \"2026-05-11T18:34:25.150Z\",\n    \"cantidadPersonas\": 7293,\n    \"estadoReserva\": \"CONFIRMADA\"\n  },\n  {\n    \"id\": 53,\n    \"mesaResponse\": {\n      \"id\": 3586,\n      \"numeroMesa\": 3598,\n      \"capacidad\": 1415,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"2026-06-23T15:07:14.060Z\",\n    \"horaFin\": \"1971-11-27T22:53:45.617Z\",\n    \"cantidadPersonas\": 9454,\n    \"estadoReserva\": \"COMPLETADA\"\n  }\n]"
                     }
                   ]
                 }
@@ -353,7 +353,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{baseUrl}}/api/reservas?desde=2004-03-04T19:30:15.081Z&hasta=2004-03-04T19:30:15.081Z",
+                  "raw": "{{baseUrl}}/api/reservas?desde=1958-04-10T13:17:41.863Z&hasta=1958-04-10T13:17:41.863Z",
                   "host": [
                     "{{baseUrl}}"
                   ],
@@ -364,11 +364,11 @@
                   "query": [
                     {
                       "key": "desde",
-                      "value": "2004-03-04T19:30:15.081Z"
+                      "value": "1958-04-10T13:17:41.863Z"
                     },
                     {
                       "key": "hasta",
-                      "value": "2004-03-04T19:30:15.081Z"
+                      "value": "1958-04-10T13:17:41.863Z"
                     }
                   ]
                 }
@@ -390,7 +390,7 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{baseUrl}}/api/reservas?desde=2004-03-04T19:30:15.081Z&hasta=2004-03-04T19:30:15.081Z",
+                      "raw": "{{baseUrl}}/api/reservas?desde=1958-04-10T13:17:41.863Z&hasta=1958-04-10T13:17:41.863Z",
                       "host": [
                         "{{baseUrl}}"
                       ],
@@ -401,11 +401,11 @@
                       "query": [
                         {
                           "key": "desde",
-                          "value": "2004-03-04T19:30:15.081Z"
+                          "value": "1958-04-10T13:17:41.863Z"
                         },
                         {
                           "key": "hasta",
-                          "value": "2004-03-04T19:30:15.081Z"
+                          "value": "1958-04-10T13:17:41.863Z"
                         }
                       ]
                     }
@@ -420,7 +420,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "[\n  {\n    \"id\": 9921,\n    \"mesaResponse\": {\n      \"id\": 5695,\n      \"numeroMesa\": 3753,\n      \"capacidad\": 7842,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"1952-12-05T01:15:27.780Z\",\n    \"horaFin\": \"1984-07-01T05:00:48.194Z\",\n    \"cantidadPersonas\": 5530,\n    \"estadoReserva\": \"PENDIENTE\"\n  },\n  {\n    \"id\": 4567,\n    \"mesaResponse\": {\n      \"id\": 9862,\n      \"numeroMesa\": 7494,\n      \"capacidad\": 8515,\n      \"estadoMesa\": \"DISPONIBLE\"\n    },\n    \"horaInicio\": \"1963-10-14T11:25:05.584Z\",\n    \"horaFin\": \"1998-07-17T02:37:22.309Z\",\n    \"cantidadPersonas\": 6284,\n    \"estadoReserva\": \"CANCELADA\"\n  }\n]"
+                  "body": "[\n  {\n    \"id\": 6942,\n    \"mesaResponse\": {\n      \"id\": 3036,\n      \"numeroMesa\": 7757,\n      \"capacidad\": 7775,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"1994-09-17T19:06:29.986Z\",\n    \"horaFin\": \"2026-05-11T18:34:25.150Z\",\n    \"cantidadPersonas\": 7293,\n    \"estadoReserva\": \"CONFIRMADA\"\n  },\n  {\n    \"id\": 53,\n    \"mesaResponse\": {\n      \"id\": 3586,\n      \"numeroMesa\": 3598,\n      \"capacidad\": 1415,\n      \"estadoMesa\": \"FUERADS\"\n    },\n    \"horaInicio\": \"2026-06-23T15:07:14.060Z\",\n    \"horaFin\": \"1971-11-27T22:53:45.617Z\",\n    \"cantidadPersonas\": 9454,\n    \"estadoReserva\": \"COMPLETADA\"\n  }\n]"
                 }
               ]
             },
@@ -440,7 +440,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"cantidadPersonas\": 2475,\n  \"horaFin\": \"1978-05-21T19:07:23.293Z\",\n  \"horaInicio\": \"1970-04-14T01:16:39.078Z\",\n  \"id_mesa\": 2458\n}",
+                  "raw": "{\n  \"cantidadPersonas\": 9184,\n  \"horaFin\": \"1966-05-06T02:43:44.492Z\",\n  \"horaInicio\": \"1972-09-08T22:29:42.546Z\",\n  \"id_mesa\": 4798\n}",
                   "options": {
                     "raw": {
                       "headerFamily": "json",
@@ -481,7 +481,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"cantidadPersonas\": 2475,\n  \"horaFin\": \"1978-05-21T19:07:23.293Z\",\n  \"horaInicio\": \"1970-04-14T01:16:39.078Z\",\n  \"id_mesa\": 2458\n}",
+                      "raw": "{\n  \"cantidadPersonas\": 9184,\n  \"horaFin\": \"1966-05-06T02:43:44.492Z\",\n  \"horaInicio\": \"1972-09-08T22:29:42.546Z\",\n  \"id_mesa\": 4798\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -510,7 +510,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "{\n  \"id\": 4186,\n  \"mesaResponse\": {\n    \"id\": 8091,\n    \"numeroMesa\": 1081,\n    \"capacidad\": 7746,\n    \"estadoMesa\": \"DISPONIBLE\"\n  },\n  \"horaInicio\": \"1987-08-26T19:37:29.787Z\",\n  \"horaFin\": \"1972-06-07T06:43:36.796Z\",\n  \"cantidadPersonas\": 2902,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
+                  "body": "{\n  \"id\": 3466,\n  \"mesaResponse\": {\n    \"id\": 5882,\n    \"numeroMesa\": 1027,\n    \"capacidad\": 8951,\n    \"estadoMesa\": \"OCUPADA\"\n  },\n  \"horaInicio\": \"1977-09-09T23:33:40.383Z\",\n  \"horaFin\": \"2015-06-16T05:13:24.868Z\",\n  \"cantidadPersonas\": 6927,\n  \"estadoReserva\": \"NO_SHOW\"\n}"
                 }
               ]
             }
@@ -544,7 +544,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -575,7 +575,7 @@
                               "variable": [
                                 {
                                   "key": "id",
-                                  "value": "4979"
+                                  "value": "2825"
                                 }
                               ]
                             }
@@ -613,7 +613,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -644,7 +644,7 @@
                               "variable": [
                                 {
                                   "key": "id",
-                                  "value": "4979"
+                                  "value": "2825"
                                 }
                               ]
                             }
@@ -676,7 +676,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                      "raw": "{\n  \"categoriaId\": 7713,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\",\n  \"nombre\": \"string\",\n  \"precio\": 3149.9822231356634,\n  \"urlImagen\": \"string\"\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -697,7 +697,7 @@
                       "variable": [
                         {
                           "key": "id",
-                          "value": "4979"
+                          "value": "2825"
                         }
                       ]
                     }
@@ -724,7 +724,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                          "raw": "{\n  \"categoriaId\": 7713,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\",\n  \"nombre\": \"string\",\n  \"precio\": 3149.9822231356634,\n  \"urlImagen\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -745,7 +745,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -760,7 +760,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "{\n  \"id\": 2027,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 9660.544061359711,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
+                      "body": "{\n  \"id\": 6610,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 8861.479075213736,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
                     }
                   ]
                 }
@@ -829,7 +829,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "[\n  {\n    \"id\": 8700,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 7542.55235823923,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"AGOTADO\"\n  },\n  {\n    \"id\": 7057,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 1399.582996543831,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  }\n]"
+                      "body": "[\n  {\n    \"id\": 6466,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 1302.410605677713,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  },\n  {\n    \"id\": 6351,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 5704.377057075552,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  }\n]"
                     }
                   ]
                 }
@@ -893,7 +893,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "[\n  {\n    \"id\": 8700,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 7542.55235823923,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"AGOTADO\"\n  },\n  {\n    \"id\": 7057,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 1399.582996543831,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  }\n]"
+                  "body": "[\n  {\n    \"id\": 6466,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 1302.410605677713,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  },\n  {\n    \"id\": 6351,\n    \"nombre\": \"string\",\n    \"descripcion\": \"string\",\n    \"precio\": 5704.377057075552,\n    \"urlImagen\": \"string\",\n    \"disponibilidadProducto\": \"ACTIVO\"\n  }\n]"
                 }
               ]
             },
@@ -913,7 +913,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                  "raw": "{\n  \"categoriaId\": 7713,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\",\n  \"nombre\": \"string\",\n  \"precio\": 3149.9822231356634,\n  \"urlImagen\": \"string\"\n}",
                   "options": {
                     "raw": {
                       "headerFamily": "json",
@@ -954,7 +954,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"categoriaId\": 7224,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"ACTIVO\",\n  \"nombre\": \"string\",\n  \"precio\": 6775.244746178537,\n  \"urlImagen\": \"string\"\n}",
+                      "raw": "{\n  \"categoriaId\": 7713,\n  \"descripcion\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\",\n  \"nombre\": \"string\",\n  \"precio\": 3149.9822231356634,\n  \"urlImagen\": \"string\"\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -983,7 +983,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "{\n  \"id\": 2027,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 9660.544061359711,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
+                  "body": "{\n  \"id\": 6610,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 8861.479075213736,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
                 }
               ]
             }
@@ -1009,7 +1009,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/pedidos/:id/estado?nuevoEstado=EN_PREPARACION",
+                          "raw": "{{baseUrl}}/api/pedidos/:id/estado?nuevoEstado=EN_CAMINO",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1022,13 +1022,13 @@
                           "query": [
                             {
                               "key": "nuevoEstado",
-                              "value": "EN_PREPARACION"
+                              "value": "EN_CAMINO"
                             }
                           ],
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -1050,7 +1050,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/pedidos/:id/estado?nuevoEstado=EN_PREPARACION",
+                              "raw": "{{baseUrl}}/api/pedidos/:id/estado?nuevoEstado=EN_CAMINO",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1063,13 +1063,13 @@
                               "query": [
                                 {
                                   "key": "nuevoEstado",
-                                  "value": "EN_PREPARACION"
+                                  "value": "EN_CAMINO"
                                 }
                               ],
                               "variable": [
                                 {
                                   "key": "id",
-                                  "value": "4979"
+                                  "value": "2825"
                                 }
                               ]
                             }
@@ -1084,7 +1084,7 @@
                             }
                           ],
                           "cookie": [],
-                          "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                          "body": "{\n  \"id\": 1046,\n  \"fecha\": \"2023-10-31T06:37:57.003Z\",\n  \"tipoPedido\": \"PARA_RECOGER\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"EN_PREPARACION\",\n  \"metodoPago\": \"EFECTIVO\",\n  \"total\": 4339.59050438384,\n  \"items\": [\n    {\n      \"productoId\": 5697,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 2705,\n      \"precioUnitario\": 7657.398946856992,\n      \"subtotal\": 5021.8589745923255\n    },\n    {\n      \"productoId\": 1029,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 9133,\n      \"precioUnitario\": 6062.828661328485,\n      \"subtotal\": 6167.112121201708\n    }\n  ]\n}"
                         }
                       ]
                     }
@@ -1117,7 +1117,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -1152,7 +1152,7 @@
                               "variable": [
                                 {
                                   "key": "id",
-                                  "value": "4979"
+                                  "value": "2825"
                                 }
                               ]
                             }
@@ -1167,7 +1167,7 @@
                             }
                           ],
                           "cookie": [],
-                          "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                          "body": "{\n  \"id\": 1046,\n  \"fecha\": \"2023-10-31T06:37:57.003Z\",\n  \"tipoPedido\": \"PARA_RECOGER\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"EN_PREPARACION\",\n  \"metodoPago\": \"EFECTIVO\",\n  \"total\": 4339.59050438384,\n  \"items\": [\n    {\n      \"productoId\": 5697,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 2705,\n      \"precioUnitario\": 7657.398946856992,\n      \"subtotal\": 5021.8589745923255\n    },\n    {\n      \"productoId\": 1029,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 9133,\n      \"precioUnitario\": 6062.828661328485,\n      \"subtotal\": 6167.112121201708\n    }\n  ]\n}"
                         }
                       ]
                     }
@@ -1196,7 +1196,7 @@
                       "variable": [
                         {
                           "key": "id",
-                          "value": "4979"
+                          "value": "2825"
                         }
                       ]
                     }
@@ -1230,7 +1230,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -1245,7 +1245,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                      "body": "{\n  \"id\": 1046,\n  \"fecha\": \"2023-10-31T06:37:57.003Z\",\n  \"tipoPedido\": \"PARA_RECOGER\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"EN_PREPARACION\",\n  \"metodoPago\": \"EFECTIVO\",\n  \"total\": 4339.59050438384,\n  \"items\": [\n    {\n      \"productoId\": 5697,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 2705,\n      \"precioUnitario\": 7657.398946856992,\n      \"subtotal\": 5021.8589745923255\n    },\n    {\n      \"productoId\": 1029,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 9133,\n      \"precioUnitario\": 6062.828661328485,\n      \"subtotal\": 6167.112121201708\n    }\n  ]\n}"
                     }
                   ]
                 }
@@ -1314,7 +1314,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "[\n  {\n    \"id\": 4529,\n    \"fecha\": \"2013-10-08T19:20:52.197Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"PENDIENTE\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 4790.124495974859,\n    \"items\": [\n      {\n        \"productoId\": 1294,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 3107,\n        \"precioUnitario\": 3224.006997834833,\n        \"subtotal\": 5023.795738255119\n      },\n      {\n        \"productoId\": 9839,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 7313,\n        \"precioUnitario\": 2420.727760451541,\n        \"subtotal\": 5718.808701700875\n      }\n    ]\n  },\n  {\n    \"id\": 5764,\n    \"fecha\": \"1949-01-10T06:26:18.731Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"EN_PREPARACION\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 706.5030700830266,\n    \"items\": [\n      {\n        \"productoId\": 7040,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 1953,\n        \"precioUnitario\": 958.1849996622127,\n        \"subtotal\": 888.5248706281279\n      },\n      {\n        \"productoId\": 8134,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 8107,\n        \"precioUnitario\": 8824.087663526012,\n        \"subtotal\": 6802.477275879959\n      }\n    ]\n  }\n]"
+                      "body": "[\n  {\n    \"id\": 5685,\n    \"fecha\": \"2004-08-24T19:11:33.687Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"CANCELADO\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 8898.434698904128,\n    \"items\": [\n      {\n        \"productoId\": 6805,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 4469,\n        \"precioUnitario\": 5109.600080790845,\n        \"subtotal\": 8949.024823187916\n      },\n      {\n        \"productoId\": 2356,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 9075,\n        \"precioUnitario\": 2651.052308652625,\n        \"subtotal\": 2.890784725823048\n      }\n    ]\n  },\n  {\n    \"id\": 8607,\n    \"fecha\": \"1972-07-28T22:13:51.221Z\",\n    \"tipoPedido\": \"CONSUMO_MESA\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"CANCELADO\",\n    \"metodoPago\": \"EFECTIVO\",\n    \"total\": 6159.257476736081,\n    \"items\": [\n      {\n        \"productoId\": 9461,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 9472,\n        \"precioUnitario\": 3029.2668801005807,\n        \"subtotal\": 9585.983543815482\n      },\n      {\n        \"productoId\": 9991,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 2922,\n        \"precioUnitario\": 7323.472773887436,\n        \"subtotal\": 9657.19926440364\n      }\n    ]\n  }\n]"
                     }
                   ]
                 }
@@ -1331,7 +1331,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{baseUrl}}/api/pedidos?estado=EN_PREPARACION",
+                  "raw": "{{baseUrl}}/api/pedidos?estado=EN_CAMINO",
                   "host": [
                     "{{baseUrl}}"
                   ],
@@ -1342,7 +1342,7 @@
                   "query": [
                     {
                       "key": "estado",
-                      "value": "EN_PREPARACION"
+                      "value": "EN_CAMINO"
                     }
                   ]
                 }
@@ -1364,7 +1364,7 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{baseUrl}}/api/pedidos?estado=EN_PREPARACION",
+                      "raw": "{{baseUrl}}/api/pedidos?estado=EN_CAMINO",
                       "host": [
                         "{{baseUrl}}"
                       ],
@@ -1375,7 +1375,7 @@
                       "query": [
                         {
                           "key": "estado",
-                          "value": "EN_PREPARACION"
+                          "value": "EN_CAMINO"
                         }
                       ]
                     }
@@ -1390,7 +1390,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "[\n  {\n    \"id\": 4529,\n    \"fecha\": \"2013-10-08T19:20:52.197Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"PENDIENTE\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 4790.124495974859,\n    \"items\": [\n      {\n        \"productoId\": 1294,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 3107,\n        \"precioUnitario\": 3224.006997834833,\n        \"subtotal\": 5023.795738255119\n      },\n      {\n        \"productoId\": 9839,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 7313,\n        \"precioUnitario\": 2420.727760451541,\n        \"subtotal\": 5718.808701700875\n      }\n    ]\n  },\n  {\n    \"id\": 5764,\n    \"fecha\": \"1949-01-10T06:26:18.731Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"EN_PREPARACION\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 706.5030700830266,\n    \"items\": [\n      {\n        \"productoId\": 7040,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 1953,\n        \"precioUnitario\": 958.1849996622127,\n        \"subtotal\": 888.5248706281279\n      },\n      {\n        \"productoId\": 8134,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 8107,\n        \"precioUnitario\": 8824.087663526012,\n        \"subtotal\": 6802.477275879959\n      }\n    ]\n  }\n]"
+                  "body": "[\n  {\n    \"id\": 5685,\n    \"fecha\": \"2004-08-24T19:11:33.687Z\",\n    \"tipoPedido\": \"PARA_RECOGER\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"CANCELADO\",\n    \"metodoPago\": \"VIRTUAL\",\n    \"total\": 8898.434698904128,\n    \"items\": [\n      {\n        \"productoId\": 6805,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 4469,\n        \"precioUnitario\": 5109.600080790845,\n        \"subtotal\": 8949.024823187916\n      },\n      {\n        \"productoId\": 2356,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 9075,\n        \"precioUnitario\": 2651.052308652625,\n        \"subtotal\": 2.890784725823048\n      }\n    ]\n  },\n  {\n    \"id\": 8607,\n    \"fecha\": \"1972-07-28T22:13:51.221Z\",\n    \"tipoPedido\": \"CONSUMO_MESA\",\n    \"direccion\": \"string\",\n    \"estadoPedido\": \"CANCELADO\",\n    \"metodoPago\": \"EFECTIVO\",\n    \"total\": 6159.257476736081,\n    \"items\": [\n      {\n        \"productoId\": 9461,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 9472,\n        \"precioUnitario\": 3029.2668801005807,\n        \"subtotal\": 9585.983543815482\n      },\n      {\n        \"productoId\": 9991,\n        \"nombreProducto\": \"string\",\n        \"cantidad\": 2922,\n        \"precioUnitario\": 7323.472773887436,\n        \"subtotal\": 9657.19926440364\n      }\n    ]\n  }\n]"
                 }
               ]
             },
@@ -1410,7 +1410,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"items\": [\n    {\n      \"cantidad\": 896,\n      \"productoId\": 2958\n    }\n  ],\n  \"metodoPago\": \"VIRTUAL\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\"\n}",
+                  "raw": "{\n  \"items\": [\n    {\n      \"cantidad\": 4436,\n      \"productoId\": 3160\n    }\n  ],\n  \"metodoPago\": \"EFECTIVO\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\"\n}",
                   "options": {
                     "raw": {
                       "headerFamily": "json",
@@ -1451,7 +1451,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"items\": [\n    {\n      \"cantidad\": 896,\n      \"productoId\": 2958\n    }\n  ],\n  \"metodoPago\": \"VIRTUAL\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\"\n}",
+                      "raw": "{\n  \"items\": [\n    {\n      \"cantidad\": 4436,\n      \"productoId\": 3160\n    }\n  ],\n  \"metodoPago\": \"EFECTIVO\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\"\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -1480,7 +1480,656 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "{\n  \"id\": 8090,\n  \"fecha\": \"1987-12-31T23:41:45.453Z\",\n  \"tipoPedido\": \"A_DOMICILIO\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"PENDIENTE\",\n  \"metodoPago\": \"VIRTUAL\",\n  \"total\": 9592.235617991379,\n  \"items\": [\n    {\n      \"productoId\": 3456,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 4082,\n      \"precioUnitario\": 9355.763294454637,\n      \"subtotal\": 5873.668689904922\n    },\n    {\n      \"productoId\": 7868,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 159,\n      \"precioUnitario\": 8988.708671186494,\n      \"subtotal\": 9984.81324891919\n    }\n  ]\n}"
+                  "body": "{\n  \"id\": 1046,\n  \"fecha\": \"2023-10-31T06:37:57.003Z\",\n  \"tipoPedido\": \"PARA_RECOGER\",\n  \"direccion\": \"string\",\n  \"estadoPedido\": \"EN_PREPARACION\",\n  \"metodoPago\": \"EFECTIVO\",\n  \"total\": 4339.59050438384,\n  \"items\": [\n    {\n      \"productoId\": 5697,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 2705,\n      \"precioUnitario\": 7657.398946856992,\n      \"subtotal\": 5021.8589745923255\n    },\n    {\n      \"productoId\": 1029,\n      \"nombreProducto\": \"string\",\n      \"cantidad\": 9133,\n      \"precioUnitario\": 6062.828661328485,\n      \"subtotal\": 6167.112121201708\n    }\n  ]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "empleados",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "editar Empleado",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"cargo\": \"string\",\n  \"fechaContratacion\": \"2008-11-08\",\n  \"horarioAsignado\": \"string\",\n  \"usuarioId\": 399\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/empleados/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "empleados",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2825"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"cargo\": \"string\",\n  \"fechaContratacion\": \"2008-11-08\",\n  \"horarioAsignado\": \"string\",\n  \"usuarioId\": 399\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/empleados/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "empleados",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "2825"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 5405,\n  \"usuarioId\": 4103,\n  \"nombreUsuario\": \"string\",\n  \"cargo\": \"string\",\n  \"fechaContratacion\": \"2018-08-19\",\n  \"estado\": \"INACTIVO\",\n  \"horarioAsignado\": \"string\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "desactivar Empleado",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/empleados/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "empleados",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2825"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/empleados/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "empleados",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "2825"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "listar Empleados",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/empleados",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "empleados"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/empleados",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "empleados"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"id\": 453,\n    \"usuarioId\": 9636,\n    \"nombreUsuario\": \"string\",\n    \"cargo\": \"string\",\n    \"fechaContratacion\": \"1972-03-20\",\n    \"estado\": \"INACTIVO\",\n    \"horarioAsignado\": \"string\"\n  },\n  {\n    \"id\": 7995,\n    \"usuarioId\": 1639,\n    \"nombreUsuario\": \"string\",\n    \"cargo\": \"string\",\n    \"fechaContratacion\": \"1956-06-27\",\n    \"estado\": \"ACTIVO\",\n    \"horarioAsignado\": \"string\"\n  }\n]"
+                }
+              ]
+            },
+            {
+              "name": "crear Empleado",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"cargo\": \"string\",\n  \"fechaContratacion\": \"2008-11-08\",\n  \"horarioAsignado\": \"string\",\n  \"usuarioId\": 399\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/empleados",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "empleados"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"cargo\": \"string\",\n  \"fechaContratacion\": \"2008-11-08\",\n  \"horarioAsignado\": \"string\",\n  \"usuarioId\": 399\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/empleados",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "empleados"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 5405,\n  \"usuarioId\": 4103,\n  \"nombreUsuario\": \"string\",\n  \"cargo\": \"string\",\n  \"fechaContratacion\": \"2018-08-19\",\n  \"estado\": \"INACTIVO\",\n  \"horarioAsignado\": \"string\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "resenas",
+          "item": [
+            {
+              "name": "promedio",
+              "item": [
+                {
+                  "name": "promedio Resenas",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/resenas/promedio",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "resenas",
+                        "promedio"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/resenas/promedio",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "resenas",
+                            "promedio"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "4864.942875563908"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "eliminar Resena",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/resenas/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "resenas",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2825"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/resenas/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "resenas",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "2825"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "listar Resenas",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/resenas?page=3215&size=5670&sort=string,string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "resenas"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "3215"
+                    },
+                    {
+                      "key": "size",
+                      "value": "5670"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "string,string"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/resenas?page=3215&size=5670&sort=string,string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "resenas"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "3215"
+                        },
+                        {
+                          "key": "size",
+                          "value": "5670"
+                        },
+                        {
+                          "key": "sort",
+                          "value": "string,string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"totalElements\": 6755,\n  \"totalPages\": 4451,\n  \"size\": 6762,\n  \"content\": [\n    {\n      \"id\": 9050,\n      \"calificacion\": 8441,\n      \"comentario\": \"string\",\n      \"fecha\": \"1995-12-08T21:02:42.046Z\"\n    },\n    {\n      \"id\": 1982,\n      \"calificacion\": 2691,\n      \"comentario\": \"string\",\n      \"fecha\": \"1982-03-20T09:39:39.948Z\"\n    }\n  ],\n  \"number\": 1824,\n  \"first\": true,\n  \"last\": false,\n  \"pageable\": {\n    \"offset\": 9864,\n    \"pageSize\": 1004,\n    \"pageNumber\": 6249,\n    \"sort\": {\n      \"empty\": true,\n      \"sorted\": false,\n      \"unsorted\": true\n    },\n    \"paged\": false,\n    \"unpaged\": false\n  },\n  \"numberOfElements\": 7491,\n  \"sort\": {\n    \"empty\": true,\n    \"sorted\": true,\n    \"unsorted\": true\n  },\n  \"empty\": false\n}"
+                }
+              ]
+            },
+            {
+              "name": "crear Resena",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"calificacion\": 4,\n  \"comentario\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/resenas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "resenas"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"calificacion\": 4,\n  \"comentario\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/resenas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "resenas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 8352,\n  \"calificacion\": 2452,\n  \"comentario\": \"string\",\n  \"fecha\": \"1951-07-21T18:27:36.497Z\"\n}"
                 }
               ]
             }
@@ -1552,7 +2201,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "[\n  {\n    \"id\": 881,\n    \"numeroMesa\": 1619,\n    \"capacidad\": 1622,\n    \"estadoMesa\": \"RESERVADA\"\n  },\n  {\n    \"id\": 3372,\n    \"numeroMesa\": 2941,\n    \"capacidad\": 5010,\n    \"estadoMesa\": \"RESERVADA\"\n  }\n]"
+                      "body": "[\n  {\n    \"id\": 5179,\n    \"numeroMesa\": 4790,\n    \"capacidad\": 9024,\n    \"estadoMesa\": \"RESERVADA\"\n  },\n  {\n    \"id\": 4112,\n    \"numeroMesa\": 3672,\n    \"capacidad\": 5631,\n    \"estadoMesa\": \"FUERADS\"\n  }\n]"
                     }
                   ]
                 }
@@ -1616,7 +2265,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "[\n  {\n    \"id\": 881,\n    \"numeroMesa\": 1619,\n    \"capacidad\": 1622,\n    \"estadoMesa\": \"RESERVADA\"\n  },\n  {\n    \"id\": 3372,\n    \"numeroMesa\": 2941,\n    \"capacidad\": 5010,\n    \"estadoMesa\": \"RESERVADA\"\n  }\n]"
+                  "body": "[\n  {\n    \"id\": 5179,\n    \"numeroMesa\": 4790,\n    \"capacidad\": 9024,\n    \"estadoMesa\": \"RESERVADA\"\n  },\n  {\n    \"id\": 4112,\n    \"numeroMesa\": 3672,\n    \"capacidad\": 5631,\n    \"estadoMesa\": \"FUERADS\"\n  }\n]"
                 }
               ]
             },
@@ -1636,7 +2285,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"capacidad\": 6725,\n  \"numeroMesa\": 2611\n}",
+                  "raw": "{\n  \"capacidad\": 5715,\n  \"numeroMesa\": 5583\n}",
                   "options": {
                     "raw": {
                       "headerFamily": "json",
@@ -1677,7 +2326,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"capacidad\": 6725,\n  \"numeroMesa\": 2611\n}",
+                      "raw": "{\n  \"capacidad\": 5715,\n  \"numeroMesa\": 5583\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -1706,7 +2355,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": "{\n  \"id\": 8643,\n  \"numeroMesa\": 7642,\n  \"capacidad\": 1837,\n  \"estadoMesa\": \"RESERVADA\"\n}"
+                  "body": "{\n  \"id\": 2079,\n  \"numeroMesa\": 60,\n  \"capacidad\": 6651,\n  \"estadoMesa\": \"FUERADS\"\n}"
                 }
               ]
             }
@@ -1891,7 +2540,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"nombre\": \"string\",\n  \"correo\": \"string\",\n  \"password\": \"string\",\n  \"telefono\": \"string\"\n}",
+                      "raw": "{\n  \"correo\": \"string\",\n  \"nombre\": \"string\",\n  \"password\": \"string\",\n  \"telefono\": \"string\"\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -1933,7 +2582,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"nombre\": \"string\",\n  \"correo\": \"string\",\n  \"password\": \"string\",\n  \"telefono\": \"string\"\n}",
+                          "raw": "{\n  \"correo\": \"string\",\n  \"nombre\": \"string\",\n  \"password\": \"string\",\n  \"telefono\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -2097,7 +2746,7 @@
                       "variable": [
                         {
                           "key": "id",
-                          "value": "4979"
+                          "value": "2825"
                         }
                       ]
                     }
@@ -2131,7 +2780,7 @@
                           "variable": [
                             {
                               "key": "id",
-                              "value": "4979"
+                              "value": "2825"
                             }
                           ]
                         }
@@ -2146,7 +2795,7 @@
                         }
                       ],
                       "cookie": [],
-                      "body": "{\n  \"id\": 2027,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 9660.544061359711,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
+                      "body": "{\n  \"id\": 6610,\n  \"nombre\": \"string\",\n  \"descripcion\": \"string\",\n  \"precio\": 8861.479075213736,\n  \"urlImagen\": \"string\",\n  \"disponibilidadProducto\": \"AGOTADO\"\n}"
                     }
                   ]
                 }
