@@ -9,6 +9,7 @@ public class ResenaMapper {
 
     public ResenaResponse toResponse(Resena resena){
         ResenaResponse resenaResponse = new ResenaResponse();
+        resenaResponse.setNombreUsuario(resena.getUsuario().getNombre());
         resenaResponse.setId(resena.getId());
         resenaResponse.setFecha(resena.getFecha());
         resenaResponse.setCalificacion(resena.getCalificacion());

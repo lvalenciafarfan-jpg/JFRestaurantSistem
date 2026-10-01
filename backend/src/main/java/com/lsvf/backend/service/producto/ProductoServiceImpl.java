@@ -67,7 +67,7 @@ public class ProductoServiceImpl implements ProductoService {
         producto.setUrlImagen(request.getUrlImagen());
         producto.setDisponibilidad(request.getDisponibilidadProducto());
 
-        CategoriaProducto categoriaProducto = encontrarCategoriaP(id);
+        CategoriaProducto categoriaProducto = encontrarCategoriaP(request.getCategoriaId());
 
         producto.setCategoriaProducto(categoriaProducto);
 

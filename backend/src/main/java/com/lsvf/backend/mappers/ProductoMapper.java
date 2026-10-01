@@ -34,12 +34,18 @@ public class ProductoMapper {
 
     public ProductoResponse toResponse(Producto producto){
         ProductoResponse productoResponse = new ProductoResponse();
+
         productoResponse.setId(producto.getId());
         productoResponse.setNombre(producto.getNombre());
         productoResponse.setPrecio(producto.getPrecio());
         productoResponse.setDescripcion(producto.getDescripcion());
         productoResponse.setUrlImagen(producto.getUrlImagen());
         productoResponse.setDisponibilidadProducto(producto.getDisponibilidad());
+
+        if (producto.getCategoriaProducto() != null) {
+            productoResponse.setCategoriaId(producto.getCategoriaProducto().getId());
+            productoResponse.setCategoriaNombre(producto.getCategoriaProducto().getNombre());
+        }
 
         return productoResponse;
     }

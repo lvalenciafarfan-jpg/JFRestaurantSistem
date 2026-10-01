@@ -58,6 +58,8 @@ public class ReservaServiceImpl implements ReservaService{
         Reserva reserva = reservaMesaMapper.toEntityReserva(request);
         reserva.setUsuario(usuario);
 
+        reservaRepository.save(reserva);
+
         Mesa mesa = reserva.getMesa();
 
         mesa.setEstado(EstadoMesa.RESERVADA);

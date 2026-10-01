@@ -46,7 +46,7 @@ public class ReservaMesaMapper {
         reservaResponse.setEstadoReserva(reserva.getEstadoReserva());
         reservaResponse.setId(reserva.getId());
         reservaResponse.setHoraInicio(reserva.getHoraInicio());
-        reserva.setHoraFin(reserva.getHoraFin());
+        reservaResponse.setHoraFin(reserva.getHoraFin());
         reservaResponse.setCantidadPersonas(reserva.getCantidadPersonas());
 
         MesaResponse mesaResponse = toResponseMesa(reserva.getMesa());

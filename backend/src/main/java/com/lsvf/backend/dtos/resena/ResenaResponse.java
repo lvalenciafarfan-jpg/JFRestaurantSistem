@@ -13,6 +13,8 @@ public class ResenaResponse {
 
     private Long id;
 
+    private String nombreUsuario;
+
     private Integer calificacion;
 
     private String comentario;

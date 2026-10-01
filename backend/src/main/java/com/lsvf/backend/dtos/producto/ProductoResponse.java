@@ -10,6 +10,10 @@ public class ProductoResponse {
 
     private Long id;
 
+    private Long categoriaId;
+
+    private String categoriaNombre;
+
     private String nombre;
 
     private String descripcion;

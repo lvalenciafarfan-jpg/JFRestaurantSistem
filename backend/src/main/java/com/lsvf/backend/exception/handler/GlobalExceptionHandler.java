@@ -5,8 +5,10 @@ import com.lsvf.backend.exception.customs.CredencialesInvalidasException;
 import com.lsvf.backend.exception.customs.RecursoNoEncontradoException;
 import com.lsvf.backend.exception.customs.ReglaDeNegocioException;
 import com.lsvf.backend.exception.dto.ErrorResponse;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -41,6 +43,19 @@ public class GlobalExceptionHandler {
         ErrorResponse error =  new ErrorResponse(403, ex.getMessage(), LocalDateTime.now());
 
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> validacion(MethodArgumentNotValidException ex) {
+        String msg = ex.getBindingResult().getFieldErrors().stream()
+                .findFirst().map(e -> e.getDefaultMessage()).orElse("Datos inválidos");
+        return ResponseEntity.badRequest().body(new ErrorResponse(400, msg, LocalDateTime.now()));
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ErrorResponse> duplicado(DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(new ErrorResponse(409, "Ese dato ya está registrado (por ejemplo, el correo).", LocalDateTime.now()));
     }
 
 }
