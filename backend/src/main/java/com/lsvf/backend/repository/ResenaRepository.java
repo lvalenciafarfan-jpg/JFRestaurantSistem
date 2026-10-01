@@ -12,6 +12,8 @@ import java.math.BigDecimal;
 @Repository
 public interface ResenaRepository extends JpaRepository<Resena, Long> {
 
+    boolean existsByUsuarioId(Long usuarioId);
+
     Page<Resena> findAll(Pageable pageable);
 
     @Query("SELECT AVG(r.calificacion) FROM Resena r")

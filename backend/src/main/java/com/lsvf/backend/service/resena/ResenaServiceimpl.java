@@ -37,6 +37,10 @@ public class ResenaServiceimpl implements ResenaService{
         resena.setComentario(request.getComentario());
         resena.setUsuario(usuario);
 
+        if (resenaRepository.existsByUsuarioId(usuario.getId())) {
+            throw new ReglaDeNegocioException("Ya has dejado una reseña");
+        }
+
         resenaRepository.save(resena);
 
         return resenaMapper.toResponse(resena);
