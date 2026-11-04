@@ -17,7 +17,7 @@ public class CategoriaMapper {
 
     public CategoriaResponse toResponse (CategoriaProducto categoriaProducto){
         CategoriaResponse categoriaResponse = new CategoriaResponse();
-        categoriaResponse.setId(categoriaResponse.getId());
+        categoriaResponse.setId(categoriaProducto.getId());
         categoriaResponse.setNombre(categoriaProducto.getNombre());
 
         return categoriaResponse;

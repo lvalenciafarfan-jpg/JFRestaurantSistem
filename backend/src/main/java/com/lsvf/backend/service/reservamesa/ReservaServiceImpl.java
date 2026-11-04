@@ -98,7 +98,7 @@ public class ReservaServiceImpl implements ReservaService{
 
         reserva.setEstadoReserva(estadoReserva);
 
-        if(estadoReserva == EstadoReserva.CANCELADA || estadoReserva == EstadoReserva.NO_SHOW){
+        if(estadoReserva == EstadoReserva.CANCELADA || estadoReserva == EstadoReserva.NO_SHOW || estadoReserva == EstadoReserva.COMPLETADA){
             reserva.getMesa().setEstado(EstadoMesa.DISPONIBLE);
             mesaRepository.save(reserva.getMesa());
         }
