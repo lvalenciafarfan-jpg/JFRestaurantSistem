@@ -17,22 +17,21 @@ pedidos a domicilio, reserva de mesas, reseñas y panel de administración.
 - ✅ Empleados: CRUD para el panel de administración (cargo, fecha de contratación, horario, estado)
 - ✅ Manejo global de excepciones personalizadas
 - ✅ Documentación interactiva con Swagger / OpenAPI
+- ✅ Frontend completo desarrollado con React, Vite y CSS
 
 ### En progreso / pendiente
-- ⏳ Panel de administración (frontend)
-- ⏳ Frontend completo
 - ⏳ Despliegue en la nube
 
 ## Stack
 - Backend: Java 25, Spring Boot 4, Spring Security, JWT, PostgreSQL
 - Documentación: Swagger / OpenAPI
-- Frontend: HTML5, CSS3, JavaScript (pendiente)
+- Frontend: React, Vite, CSS
 
 ## Estructura del repositorio
 ```
 JFRestaurantSistem/
 ├── backend/ ← API REST en Spring Boot
-├── frontend/ ← (pendiente)
+├── frontend/ ← Interfaz de usuario (React + Vite + CSS)
 └── docs/
 ├── diagrama-er.png
 └── postman/
@@ -49,8 +48,6 @@ Este proyecto usa variables de entorno para las credenciales. Antes de correrlo,
 - `DB_USERNAME` — usuario de PostgreSQL
 - `DB_PASSWORD` — contraseña de PostgreSQL
 - `JWT_SECRET` — clave aleatoria de al menos 32 caracteres (genera una con `openssl rand -base64 32`)
-
-Puedes usar `backend/src/main/resources/application.properties.example` como referencia.
 
 ## Probar la API
 - **Swagger UI**: `http://localhost:8080/swagger-ui/index.html` (con el backend corriendo)
