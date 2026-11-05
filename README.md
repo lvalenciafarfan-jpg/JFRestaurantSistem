@@ -4,7 +4,7 @@ Plataforma web para gestión y reservas de restaurantes: menú digital,
 pedidos a domicilio, reserva de mesas, reseñas y panel de administración.
 
 ## Estado del proyecto
-🚧 Backend completo — Frontend en desarrollo
+🚧 Backend completo y Frontend Completo. Finalizado hasta ahora.
 
 ### Completado
 - ✅ Configuración inicial y conexión a PostgreSQL
