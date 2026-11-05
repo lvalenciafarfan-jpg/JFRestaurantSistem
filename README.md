@@ -18,9 +18,7 @@ pedidos a domicilio, reserva de mesas, reseñas y panel de administración.
 - ✅ Manejo global de excepciones personalizadas
 - ✅ Documentación interactiva con Swagger / OpenAPI
 - ✅ Frontend completo desarrollado con React, Vite y CSS
-
-### En progreso / pendiente
-- ⏳ Despliegue en la nube
+- ✅ Despliegue en la nube (neon, vercel, render)
 
 ## Stack
 - Backend: Java 25, Spring Boot 4, Spring Security, JWT, PostgreSQL
